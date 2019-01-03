@@ -30,8 +30,8 @@ object Versions {
     val dagger = "2.16"
 
     val junit = "4.12"
-    val runner = "1.0.2"
-    val espresso = "3.0.2"
+    val runner = "1.1.0"
+    val espresso = "3.1.0"
 }
 
 object Languages {
@@ -46,9 +46,9 @@ object Libraries {
     val rxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
 
-    val rxkotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlin}"
-    val rxandroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
-    val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
+    val rxKotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlin}"
+    val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
+    val rxJava2 = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
 
     val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
@@ -56,10 +56,9 @@ object Libraries {
     val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
     val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
 
-    val dagger = "com.google.dagger:dagger:${Versions.dagger}"
-    val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
     val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
     val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
 }
 
 object SupportLibraries {
@@ -70,11 +69,11 @@ object SupportLibraries {
 }
 
 object TestLibraries {
-    val runnerClass = "android.support.test.runner.AndroidJUnitRunner"
     val junit = "junit:junit:${Versions.junit}"
+    val runnerClass = "androidx.test.runner.AndroidJUnitRunner"
 
-    val testRunner = "com.android.support.test:runner:${Versions.runner}"
-    val espressoCore = "com.android.support.test:runner:${Versions.espresso}"
+    val testRunner = "androidx.test:runner:${Versions.runner}"
+    val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 
     val lifecycleTesting = "androidx.arch.core:core-testing:${Versions.lifecycle}"
     val roomTesting = "androidx.room:room-testing:${Versions.room}"

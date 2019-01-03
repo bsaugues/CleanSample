@@ -37,9 +37,9 @@ dependencies {
     implementation SupportLibraries.design
     implementation SupportLibraries.constraintLayout
 
-    implementation Libraries.rxkotlin
-    implementation Libraries.rxandroid
-    implementation Libraries.rxjava
+    implementation Libraries.rxKotlin
+    implementation Libraries.rxAndroid
+    implementation Libraries.rxJava2
 
     implementation Libraries.retrofit
     implementation Libraries.rxAdapter
@@ -51,7 +51,6 @@ dependencies {
     implementation Libraries.roomRuntime
     kapt Libraries.roomCompiler
 
-    implementation Libraries.dagger
     kapt Libraries.daggerCompiler
     implementation Libraries.daggerAndroid
     kapt Libraries.daggerAndroidProcessor

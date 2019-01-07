@@ -51,10 +51,7 @@ dependencies {
     implementation Libraries.roomRuntime
     kapt Libraries.roomCompiler
 
-    kapt Libraries.daggerCompiler
-    implementation Libraries.daggerAndroid
-    kapt Libraries.daggerAndroidProcessor
-    implementation SupportLibraries.daggerAndroidSupport
+    implementation Libraries.koin
 
     implementation Libraries.timber
 

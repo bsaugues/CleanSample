@@ -1,24 +1,12 @@
 package com.bsaugues.cleansample.presentation.di
 
-import android.content.Context
-import com.bsaugues.cleansample.presentation.di.module.ManagerModule
-import com.bsaugues.cleansample.presentation.di.module.RepositoryModule
-import com.bsaugues.cleansample.presentation.ui.viewmodel.DummyViewModel
-import dagger.BindsInstance
-import dagger.Component
-import javax.inject.Singleton
+import com.bsaugues.cleansample.presentation.di.module.managerModule
+import com.bsaugues.cleansample.presentation.di.module.repositoryModule
+import com.bsaugues.cleansample.presentation.di.module.viewModelModule
+import org.koin.dsl.module.Module
 
-@Singleton
-@Component(modules = [RepositoryModule::class, ManagerModule::class])
-interface ApplicationComponent {
-
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun applicationContext(applicationContext: Context): Builder
-
-        fun build(): ApplicationComponent
-    }
-
-    val dummyViewModel: DummyViewModel
-}
+val appComponent: List<Module> = listOf(
+    managerModule,
+    repositoryModule,
+    viewModelModule
+)

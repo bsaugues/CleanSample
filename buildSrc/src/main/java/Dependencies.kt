@@ -27,7 +27,7 @@ object Versions {
     val retrofit = "2.5.0"
     val lifecycle = "2.0.0"
     val room = "2.1.0-alpha01"
-    val dagger = "2.16"
+    val koin = "1.0.2"
     val timber = "4.7.1"
 
     val junit = "4.12"
@@ -57,9 +57,7 @@ object Libraries {
     val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
     val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
 
-    val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
-    val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
-    val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    val koin = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 
     val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }
@@ -68,7 +66,6 @@ object SupportLibraries {
     val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     val design = "com.google.android.material:material:${Versions.design}"
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-    val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
 }
 
 object TestLibraries {

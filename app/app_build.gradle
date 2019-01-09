@@ -1,0 +1,64 @@
+apply plugin: "com.android.application"
+
+apply plugin: "kotlin-android"
+
+apply plugin: "kotlin-android-extensions"
+
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        applicationId "com.bsaugues.cleansample"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Versions.releaseVersionCode
+        versionName Versions.releaseVersionName
+        testInstrumentationRunner TestLibraries.runnerClass
+
+        resConfigs Languages.english, Languages.french
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+dependencies {
+    implementation Libraries.kotlinStandardLibrary
+
+    implementation SupportLibraries.appcompat
+    implementation SupportLibraries.design
+    implementation SupportLibraries.constraintLayout
+
+    implementation Libraries.rxKotlin
+    implementation Libraries.rxAndroid
+    implementation Libraries.rxJava2
+
+    implementation Libraries.retrofit
+    implementation Libraries.rxAdapter
+    implementation Libraries.gsonConverter
+
+    implementation Libraries.lifecycleExtensions
+    kapt Libraries.lifecycleCompiler
+
+    implementation Libraries.roomRuntime
+    kapt Libraries.roomCompiler
+
+    kapt Libraries.daggerCompiler
+    implementation Libraries.daggerAndroid
+    kapt Libraries.daggerAndroidProcessor
+    implementation SupportLibraries.daggerAndroidSupport
+
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.lifecycleTesting
+    testImplementation TestLibraries.roomTesting
+    androidTestImplementation TestLibraries.testRunner
+    androidTestImplementation TestLibraries.espressoCore
+}

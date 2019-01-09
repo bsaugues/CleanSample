@@ -10,9 +10,8 @@ import io.reactivex.disposables.Disposables
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
-import javax.inject.Inject
 
-class DummyViewModel @Inject constructor(
+class DummyViewModel constructor(
     private val dummyRepository: DummyRepository
 ) : ViewModel() {
 

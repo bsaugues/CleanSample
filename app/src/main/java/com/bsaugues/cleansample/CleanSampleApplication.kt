@@ -1,22 +1,20 @@
 package com.bsaugues.cleansample
 
 import android.app.Application
-import com.bsaugues.cleansample.presentation.di.ApplicationComponent
-import com.bsaugues.cleansample.presentation.di.DaggerApplicationComponent
-import com.bsaugues.cleansample.presentation.di.DaggerComponentProvider
+import com.bsaugues.cleansample.presentation.di.appComponent
+import org.koin.android.ext.android.startKoin
 import timber.log.Timber
 
-class CleanSampleApplication : Application(), DaggerComponentProvider {
-
-    override val component: ApplicationComponent by lazy {
-        DaggerApplicationComponent.builder()
-            .applicationContext(applicationContext)
-            .build()
-    }
+class CleanSampleApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        initInjection()
         setupTimber()
+    }
+
+    private fun initInjection() {
+        startKoin(applicationContext, appComponent)
     }
 
     private fun setupTimber() {

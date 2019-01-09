@@ -51,16 +51,14 @@ dependencies {
     implementation Libraries.roomRuntime
     kapt Libraries.roomCompiler
 
-    kapt Libraries.daggerCompiler
-    implementation Libraries.daggerAndroid
-    kapt Libraries.daggerAndroidProcessor
-    implementation SupportLibraries.daggerAndroidSupport
+    implementation Libraries.koin
 
     implementation Libraries.timber
 
-    testImplementation TestLibraries.junit
     testImplementation TestLibraries.lifecycleTesting
     testImplementation TestLibraries.roomTesting
+
+    androidTestImplementation TestLibraries.junit
     androidTestImplementation TestLibraries.testRunner
     androidTestImplementation TestLibraries.espressoCore
 }

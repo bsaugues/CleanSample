@@ -4,15 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bsaugues.cleansample.R
 import com.bsaugues.cleansample.data.utils.observeSafe
-import com.bsaugues.cleansample.presentation.di.injector
-import com.bsaugues.cleansample.presentation.ui.viewmodel.factory.getViewModel
+import com.bsaugues.cleansample.presentation.ui.viewmodel.DummyViewModel
 import kotlinx.android.synthetic.main.activity_dummy.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DummyActivity : AppCompatActivity() {
 
-    private val viewModel by lazy {
-        getViewModel { injector.dummyViewModel }
-    }
+    private val viewModel: DummyViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
